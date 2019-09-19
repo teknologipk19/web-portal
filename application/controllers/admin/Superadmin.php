@@ -258,6 +258,24 @@ class Superadmin extends CI_Controller
 		$this->load->view('admin/v_masterdataberita', $data);
 	}
 
+	public function actiondatakomentarberita()
+	{
+		$nama_komentar = $this->input->post('nama_komentar');
+		$komentar_berita = $this->input->post('komentar_berita');
+		$status_komentar = $this->input->post('status_komentar');
+		$statusdata = $this->input->post('statusdata');
+		if ($statusdata == "Tambah")
+		{
+			$data = array(
+						'nama_komentar' => $nama_komentar, 
+						'komentar_berita' => $komentar_berita,
+						'status_komentar' => $status_komentar,
+			);
+			$this->m_admin->InsertData('tbl_datakomentarberita', $data);
+			echo "<script>alert('Berhasil');window.location='".base_url()."admin/superadmin/dataiklanheader';</script>";
+		}
+	}
+
 	//Master Data Kategori
 	public function masterdatakategori()
 	{
