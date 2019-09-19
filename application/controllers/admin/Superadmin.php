@@ -274,6 +274,26 @@ class Superadmin extends CI_Controller
 			$this->m_admin->InsertData('tbl_datakomentarberita', $data);
 			echo "<script>alert('Berhasil');window.location='".base_url()."admin/superadmin/dataiklanheader';</script>";
 		}
+		if ($statusdata == "Update")
+		{
+			$data = array(
+						'nama_komentar' => $nama_komentar, 
+						'komentar_berita' => $komentar_berita,
+						'status_komentar' => $status_komentar,
+			);
+			$this->m_admin->InsertData('tbl_datakomentarberita', $data);
+			echo "<script>alert('Berhasil');window.location='".base_url()."admin/superadmin/dataiklanheader';</script>";
+		}
+		if ($statusdata == "Hapus")
+		{
+			$data = array(
+						'nama_komentar' => $nama_komentar, 
+						'komentar_berita' => $komentar_berita,
+						'status_komentar' => $status_komentar,
+			);
+			$this->m_admin->InsertData('tbl_datakomentarberita', $data);
+			echo "<script>alert('Berhasil');window.location='".base_url()."admin/superadmin/dataiklanheader';</script>";
+		}
 	}
 
 	//Master Data Kategori
