@@ -1,4 +1,4 @@
-<?php 
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller
@@ -10,13 +10,12 @@ class Users extends CI_Controller
 
 	public function datausers()
 	{
-		$id_user = $this->session->userdata('id');
-		$data = array(
-					'title' => 'Data Komentar Berita', 
-					'subtitle' => 'Data Komentar Berita', 
-					'users_aktif' => $this->m_users->getdatausers("WHERE id_users = '$id_users' "),
-		);
-		$this->load->view('users/datausers', $data);
-	}
+	 	$id_user = $this->session->userdata('id');
+	 	$data = array(
+	 				'title' => 'Data User', 
+	 				'subtitle' => 'Data User', 
+	 	);
+	 	$this->load->view('users/v_datausers', $data);
+	} 	
 }
 ?>
